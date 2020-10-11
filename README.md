@@ -14,11 +14,14 @@ Project to gather useful information from Github API (v3)
   - clone url
   - name of repo/project
   - list of contributors
+  - size of repos
 - contributors
   - name
   - email
 
 ## Entities
 
-- Repository
-- Contributors
+These are objects that are important to the project, following my own naming conventions:
+
+- Project (aka Github repository)
+- Contributors (aka students/other contributing to a project)
