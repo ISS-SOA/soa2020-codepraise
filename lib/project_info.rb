@@ -6,7 +6,7 @@ require 'yaml'
 config = YAML.safe_load(File.read('config/secrets.yml'))
 
 def gh_api_path(path)
-  'https://api.github.com/' + path
+  "https://api.github.com/#{path}"
 end
 
 def call_gh_url(config, url)
