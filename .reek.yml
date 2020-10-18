@@ -1,0 +1,7 @@
+---
+  detectors:
+    IrresponsibleModule:
+      enabled: false
+  exclude_paths:
+    - lib/_snippets
+  
