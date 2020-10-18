@@ -32,13 +32,13 @@ describe 'Tests Github API library' do
     it 'SAD: should raise exception on incorrect project' do
       _(proc do
         CodePraise::GithubApi.new(GH_TOKEN).project('soumyaray', 'foobar')
-      end).must_raise CodePraise::GithubApi::Errors::NotFound
+      end).must_raise CodePraise::GithubApi::Response::NotFound
     end
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
         CodePraise::GithubApi.new('BAD_TOKEN').project('soumyaray', 'foobar')
-      end).must_raise CodePraise::GithubApi::Errors::Unauthorized
+      end).must_raise CodePraise::GithubApi::Response::Unauthorized
     end
   end
 
