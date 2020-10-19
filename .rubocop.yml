@@ -3,6 +3,9 @@
 AllCops:
   TargetRubyVersion: 2.7
   NewCops: enable
+  Include:
+    - 'Gemfile'
+    - 'Rakefile'
 
 # ignore block length in test code only
 Metrics/BlockLength:
