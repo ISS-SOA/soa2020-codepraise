@@ -1,84 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/init.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/lib/init.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          3,
-          null
-        ]
-      },
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/lib/entities/init.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          3,
-          null
-        ]
-      },
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/lib/entities/project.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/lib/entities/member.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/lib/gateways/init.rb": {
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/init.rb": {
         "lines": [
           null,
           null,
@@ -87,7 +10,120 @@
           null
         ]
       },
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/lib/gateways/github_api.rb": {
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/config/init.rb": {
+        "lines": [
+          null,
+          null,
+          1
+        ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/config/environment.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/models/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          3,
+          null
+        ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/models/entities/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          3,
+          null
+        ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/models/entities/project.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/models/entities/member.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/models/gateways/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/models/gateways/github_api.rb": {
         "lines": [
           null,
           null,
@@ -156,7 +192,7 @@
           null
         ]
       },
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/lib/mappers/init.rb": {
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/models/mappers/init.rb": {
         "lines": [
           null,
           null,
@@ -165,7 +201,7 @@
           null
         ]
       },
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/lib/mappers/member_mapper.rb": {
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/models/mappers/member_mapper.rb": {
         "lines": [
           null,
           null,
@@ -224,7 +260,7 @@
           null
         ]
       },
-      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/codepraise_demo/lib/mappers/project_mapper.rb": {
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/models/mappers/project_mapper.rb": {
         "lines": [
           null,
           null,
@@ -298,8 +334,68 @@
           null,
           null
         ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/controllers/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/soumyaray/Sync/Dropbox/ossdev/classes/SOA-class/soa2020/codepraise_demo/app/controllers/app.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1603552743
+    "timestamp": 1603633788
   }
 }

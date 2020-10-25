@@ -6,6 +6,8 @@ AllCops:
   Include:
     - 'Gemfile'
     - 'Rakefile'
+  Exclude:
+    - _snippets/*
 
 # ignore block length in test code only
 Metrics/BlockLength:
@@ -41,4 +43,4 @@ Layout/MultilineMethodCallIndentation:
 Lint/NonDeterministicRequireOrder:
   Enabled: true
   Exclude:
-    - **/init.rb
+    - init.rb

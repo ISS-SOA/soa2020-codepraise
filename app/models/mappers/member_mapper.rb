@@ -1,4 +1,4 @@
-# frozen_string_literal: false
+# frozen_string_literal: true
 
 module CodePraise
   # Provides access to contributor data
@@ -11,7 +11,7 @@ module CodePraise
         @gateway = @gateway_class.new(@token)
       end
 
-      def load_several(url)
+      def find_by_url(url)
         @gateway.contributors_data(url).map do |data|
           MemberMapper.build_entity(data)
         end
