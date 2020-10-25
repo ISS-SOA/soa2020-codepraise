@@ -311,4 +311,74 @@ http_interactions:
       encoding: UTF-8
       string: '{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}'
   recorded_at: Sun, 18 Oct 2020 01:45:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/soumyaray/YPBT-app
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      Authorization:
+      - token BAD_TOKEN
+      Connection:
+      - close
+      Host:
+      - api.github.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Sat, 24 Oct 2020 15:17:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '80'
+      Connection:
+      - close
+      Server:
+      - GitHub.com
+      Status:
+      - 401 Unauthorized
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '59'
+      X-Ratelimit-Reset:
+      - '1603556225'
+      X-Ratelimit-Used:
+      - '1'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
+        X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Github-Request-Id:
+      - 3810:60CA:4D9B82:60F256:5F944571
+    body:
+      encoding: UTF-8
+      string: '{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}'
+  recorded_at: Sat, 24 Oct 2020 15:17:05 GMT
 recorded_with: VCR 6.0.0
