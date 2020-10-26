@@ -63,7 +63,7 @@ module CodePraise
         end
 
         def members
-          @member_mapper.load_several(@data['contributors_url'])
+          @member_mapper.find_by_url(@data['contributors_url'])
         end
       end
     end

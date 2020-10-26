@@ -1,4 +1,4 @@
-# frozen_string_literal: false
+# frozen_string_literal: true
 
 require 'http'
 
@@ -20,7 +20,7 @@ module CodePraise
 
       # Sends out HTTP requests to Github
       class Request
-        REPOS_PATH = 'https://api.github.com/repos/'.freeze
+        REPOS_PATH = 'https://api.github.com/repos/'
 
         def initialize(token)
           @token = token

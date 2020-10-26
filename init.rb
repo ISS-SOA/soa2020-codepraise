@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
-
-%w[lib]
-  .each do |folder|
-    require_relative "#{folder}/init"
-  end
+%w[config app].each do |folder|
+  require_relative "#{folder}/init"
+end
