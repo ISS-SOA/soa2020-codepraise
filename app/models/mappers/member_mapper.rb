@@ -11,7 +11,7 @@ module CodePraise
         @gateway = @gateway_class.new(@token)
       end
 
-      def find_by_url(url)
+      def load_several(url)
         @gateway.contributors_data(url).map do |data|
           MemberMapper.build_entity(data)
         end
