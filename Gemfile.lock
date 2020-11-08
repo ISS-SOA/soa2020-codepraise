@@ -75,6 +75,7 @@ GEM
     parser (2.7.2.0)
       ast (~> 2.4.1)
     path_expander (1.1.0)
+    pg (1.2.3)
     powerpack (0.1.2)
     psych (3.2.0)
     public_suffix (4.0.6)
@@ -105,7 +106,7 @@ GEM
     ruby-progressbar (1.10.1)
     ruby_parser (3.15.0)
       sexp_processor (~> 4.9)
-    sequel (5.37.0)
+    sequel (5.38.0)
     sexp_processor (4.15.1)
     simplecov (0.19.1)
       docile (~> 1.1)
@@ -122,7 +123,7 @@ GEM
     unf_ext (0.0.7.7)
     unicode-display_width (0.1.1)
     vcr (6.0.0)
-    webmock (3.9.3)
+    webmock (3.9.4)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -142,6 +143,7 @@ DEPENDENCIES
   http (~> 4.0)
   minitest (~> 5.0)
   minitest-rg (~> 5.0)
+  pg
   puma (~> 3.11)
   rake
   reek
@@ -155,6 +157,9 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   vcr (~> 6.0)
   webmock (~> 3.0)
+
+RUBY VERSION
+   ruby 2.7.1p83
 
 BUNDLED WITH
    2.1.4

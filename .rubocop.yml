@@ -4,17 +4,20 @@ AllCops:
   TargetRubyVersion: 2.7
   NewCops: enable
   Include:
-    - 'Gemfile'
-    - 'Rakefile'
+    - Gemfile
+    - Rakefile
+    - '**/*.rb'
   Exclude:
     - _snippets/*
+    - 'app/infrastructure/git/repostore/**/*'
 
-# ignore block length in test code only
+# ignore block length where unavoidable (e.g., framework requires it)
 Metrics/BlockLength:
   Enabled: true
   Exclude:
-    - spec/**/*
-    - Rakefile
+    - app/controllers/**/*.rb # Roda's nested controllers require large blocks
+    - spec/**/* # Minitest's nested test structure requires large blocks
+    - Rakefile # Rake namespaces produce large blocks
 
 # allow unsafe YAML loading in test code only
 Security/YAMLLoad:

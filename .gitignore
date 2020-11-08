@@ -1,4 +1,5 @@
 config/secrets.yml
+.bundle
 .irb_history
 *.db
 coverage/*
