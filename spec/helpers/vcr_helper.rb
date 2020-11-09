@@ -5,8 +5,8 @@ require 'webmock'
 
 # Setting up VCR
 class VcrHelper
-  CASSETTES_FOLDER = 'spec/fixtures/cassettes'.freeze
-  GITUB_CASSETTE = 'github_api'.freeze
+  CASSETTES_FOLDER = 'spec/fixtures/cassettes'
+  GITUB_CASSETTE = 'github_api'
 
   def self.setup_vcr
     VCR.configure do |c|
