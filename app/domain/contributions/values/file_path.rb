@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'code_language'
+
 module CodePraise
   module Value
     # Value of a file's full path (delegates to String)
@@ -12,6 +14,14 @@ module CodePraise
       def initialize(filepath)
         super(filepath)
         parse_path
+      end
+
+      def extension
+        @extension ||= filename.match(/\.([a-zA-Z0-9]+$)/).captures.first
+      end
+
+      def language
+        CodeLanguage.extension_language(extension)
       end
 
       def folder_after(root)

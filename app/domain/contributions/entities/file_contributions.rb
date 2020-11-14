@@ -6,16 +6,24 @@ module CodePraise
     class FileContributions
       include Mixins::ContributionsCalculator
 
-      DOT = '\.'
-      LINE_END = '$'
-      WANTED_EXTENSION = %w[rb js css html slim md].join('|')
-      EXTENSION_REGEX = /#{DOT}#{WANTED_EXTENSION}#{LINE_END}/.freeze
+      WANTED_LANGUAGES = [
+        Value::CodeLanguage::Ruby,
+        Value::CodeLanguage::Python,
+        Value::CodeLanguage::Javascript,
+        Value::CodeLanguage::Css,
+        Value::CodeLanguage::Html,
+        Value::CodeLanguage::Markdown
+      ].freeze
 
       attr_reader :file_path, :lines
 
       def initialize(file_path:, lines:)
         @file_path = Value::FilePath.new(file_path)
         @lines = lines
+      end
+
+      def language
+        file_path.language
       end
 
       def credit_share
@@ -36,7 +44,7 @@ module CodePraise
       end
 
       def wanted
-        file_path.filename.match(EXTENSION_REGEX)
+        WANTED_LANGUAGES.include?(language)
       end
     end
   end

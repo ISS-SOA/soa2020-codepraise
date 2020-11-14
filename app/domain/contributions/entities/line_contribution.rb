@@ -7,27 +7,21 @@ require_relative 'contributor'
 module CodePraise
   module Entity
     # Entity for a one line of code from a contributor
-    class LineContribution < Dry::Struct
-      COMMENT = '[#\/]'
-      WHITESPACE = '[ \t]'
-      LINE_END = '$'
-      RUBY_USELESS = /^#{WHITESPACE}*(#{COMMENT}|#{LINE_END})/.freeze
+    class LineContribution
       NO_CREDIT = 0
       FULL_CREDIT = 1
 
-      include Dry.Types
+      attr_reader :contributor, :code, :time, :number
 
-      attribute :contributor,  Contributor
-      attribute :code,         Strict::String
-      attribute :time,         Strict::Time
-      attribute :number,       Coercible::Integer
-
-      def credit
-        useless? ? NO_CREDIT : FULL_CREDIT
+      def initialize(contributor:, code:, time:, number:)
+        @contributor = contributor
+        @code = code
+        @time = time
+        @number = number
       end
 
-      def useless?
-        code.match(RUBY_USELESS)
+      def credit
+        code.useless? ? NO_CREDIT : FULL_CREDIT
       end
     end
   end
