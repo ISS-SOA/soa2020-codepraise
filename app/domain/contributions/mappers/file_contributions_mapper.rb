@@ -21,15 +21,21 @@ module CodePraise
         @file_report[0]
       end
 
+      def file_path
+        @file_path ||= Value::FilePath.new(filename)
+      end
+
       def contributions
         summarize_line_reports(@file_report[1])
       end
 
       def summarize_line_reports(line_reports)
         line_reports.map.with_index do |report, line_index|
+          code_str = strip_leading_tab(report['code'])
+
           Entity::LineContribution.new(
             contributor: contributor_from(report),
-            code: strip_leading_tab(report['code']),
+            code: file_path.language.new(code_str),
             time: Time.at(report['author-time'].to_i),
             number: index_to_number(line_index)
           )

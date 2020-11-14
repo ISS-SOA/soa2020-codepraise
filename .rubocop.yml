@@ -35,6 +35,9 @@ Style/SymbolArray:
   Exclude:
     - Rakefile
 
+Style/SingleLineMethods:
+  Enabled: false
+
 Lint/ConstantDefinitionInBlock:
   Enabled: true
   Exclude:
@@ -43,6 +46,10 @@ Lint/ConstantDefinitionInBlock:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+
+Layout/HashAlignment:
+  Enabled: true
+  EnforcedHashRocketStyle: table
 
 Lint/NonDeterministicRequireOrder:
   Enabled: true
