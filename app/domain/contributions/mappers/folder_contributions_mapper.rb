@@ -68,13 +68,13 @@ module CodePraise
       end
 
       def rel_path(filename)
-        rel_filename = filename[(folder_prefix_length)..-1]
+        rel_filename = filename[(folder_prefix_length)..]
         match = rel_filename.match(%r{(?<folder>[^\/]+)\/.*})
         match.nil? ? '' : match[:folder]
       end
 
       def filename_only(filename)
-        rel_filename = filename[(folder_prefix_length)..-1]
+        rel_filename = filename[(folder_prefix_length)..]
         match = rel_filename.match(%r{(?<subfolder>.*\/)?(?<file>.*)})
         match[:file]
       end
