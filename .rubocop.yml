@@ -34,6 +34,7 @@ Style/SymbolArray:
   Enabled: true
   Exclude:
     - Rakefile
+    - app/infrastructure/database/migrations/*.rb
 
 Style/SingleLineMethods:
   Enabled: false
