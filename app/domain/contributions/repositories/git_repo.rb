@@ -18,18 +18,12 @@ module CodePraise
     end
 
     def local
-      raise Errors::NoGitRepoFound unless exists_locally?
-
-      @local
+      exists_locally? ? @local : raise(Errors::NoGitRepoFound)
     end
 
     def delete!
       @local.delete!
     end
-
-    # def too_large?
-    #   @repo.size > MAX_SIZE
-    # end
 
     def exists_locally?
       @local.exists?

@@ -56,7 +56,7 @@ module CodePraise
 
       # remove leading tab from git blame code output
       def strip_leading_tab(code_line)
-        code_line[1..-1]
+        code_line[1..]
       end
 
       # add 1 to line indexes to make them line numbers
