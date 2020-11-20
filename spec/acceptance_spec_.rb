@@ -165,7 +165,6 @@ describe 'Acceptance Tests' do
         row.td(class: %w[folder name]).present?
       end
 
-
       views_folder = folder_rows.first.tds.find do |column|
         column.link.href.include? 'views_objects'
       end
