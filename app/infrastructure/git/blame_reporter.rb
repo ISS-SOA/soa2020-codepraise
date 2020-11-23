@@ -13,6 +13,8 @@ module CodePraise
       def folder_report(folder_name)
         folder_name = '' if folder_name == '/'
         files = @local.files.select { |file| file.start_with? folder_name }
+        raise('no files found in folder') if files.empty?
+
         @local.in_repo do
           files.map do |filename|
             [filename, file_report(filename)]

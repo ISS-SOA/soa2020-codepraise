@@ -1,8 +1,8 @@
-# frozen_string_literal: false
+# frozen_string_literal: true
 
-require_relative 'helpers/spec_helper'
-require_relative 'helpers/vcr_helper'
-require_relative 'helpers/database_helper'
+require_relative '../../helpers/spec_helper'
+require_relative '../../helpers/vcr_helper'
+require_relative '../../helpers/database_helper'
 
 describe 'Integration Tests of Github API and Database' do
   VcrHelper.setup_vcr
@@ -21,7 +21,7 @@ describe 'Integration Tests of Github API and Database' do
       DatabaseHelper.wipe_database
     end
 
-    it 'HAPPY: should be able to save project from Github to database' do
+    it 'HAPPY: should be able to save remote git repo data to database' do
       project = CodePraise::Github::ProjectMapper
         .new(GITHUB_TOKEN)
         .find(USERNAME, PROJECT_NAME)

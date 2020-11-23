@@ -12,7 +12,7 @@ module CodePraise
 
       def self.find_full_name(owner_name, project_name)
         db_project = Database::ProjectOrm
-          .left_join(:members, id: :owner_id)
+          .graph(:members, id: :owner_id)
           .where(username: owner_name, name: project_name)
           .first
 

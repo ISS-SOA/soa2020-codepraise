@@ -16,7 +16,7 @@ class VcrHelper
     end
   end
 
-  def self.configure_vcr_for_github
+  def self.configure_vcr_for_github(recording: :new_episodes)
     VCR.configure do |c|
       c.filter_sensitive_data('<GITHUB_TOKEN>') { GITHUB_TOKEN }
       c.filter_sensitive_data('<GITHUB_TOKEN_ESC>') { CGI.escape(GITHUB_TOKEN) }
@@ -24,8 +24,9 @@ class VcrHelper
 
     VCR.insert_cassette(
       GITUB_CASSETTE,
-      record: :new_episodes,
-      match_requests_on: %i[method uri headers]
+      record: recording,
+      match_requests_on: %i[method uri headers],
+      allow_playback_repeats: true
     )
   end
 
