@@ -3,7 +3,7 @@
 require 'roda'
 require 'slim'
 require 'slim/include'
-require_relative 'helpers.rb'
+require_relative 'helpers'
 
 module CodePraise
   # Web App
@@ -13,6 +13,7 @@ module CodePraise
     plugin :halt
     plugin :flash
     plugin :all_verbs # allows DELETE and other HTTP verbs beyond GET/POST
+    plugin :caching
     plugin :render, engine: 'slim', views: 'app/presentation/views_html'
     plugin :assets, path: 'app/presentation/assets',
                     css: 'style.css', js: 'table_row.js'
@@ -33,7 +34,7 @@ module CodePraise
           flash[:error] = result.failure
           viewable_projects = []
         else
-          projects = result.value!
+          projects = result.value!.projects
           if projects.none?
             flash.now[:notice] = 'Add a Github project to get started'
           end
@@ -54,13 +55,14 @@ module CodePraise
 
             if project_made.failure?
               flash[:error] = project_made.failure
-              routing.redirect '/'
+            else
+              project = project_made.value!
+              session[:watching].insert(0, project.fullname).uniq!
+              flash[:notice] = 'Project added to your list'
             end
 
-            project = project_made.value!
-            session[:watching].insert(0, project.fullname).uniq!
-            flash[:notice] = 'Project added to your list'
-            routing.redirect "project/#{project.owner.username}/#{project.name}"
+            # routing.redirect "project/#{project.owner.username}/#{project.name}"
+            routing.redirect '/'
           end
         end
 
@@ -96,6 +98,7 @@ module CodePraise
               appraised[:project], appraised[:folder]
             )
 
+            response.expires 60, public: true
             view 'project', locals: { proj_folder: proj_folder }
           end
         end
