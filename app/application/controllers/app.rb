@@ -94,20 +94,23 @@ module CodePraise
             end
 
             appraisal = OpenStruct.new(result.value!)
+
             if appraisal.response.processing?
-              flash[:notice] = 'Project is being cloned and analyzed; '\
-                               'please try again in a bit'
-              routing.redirect '/'
+              flash.now[:notice] = 'The project is being appraised'
+            else
+              appraised = appraisal.appraised
+              proj_folder = Views::ProjectFolderContributions
+                .new(appraised[:project], appraised[:folder])
+              response.expires(60, public: true) if App.environment == :produciton
             end
 
-            appraised = appraisal.appraised
-
-            proj_folder = Views::ProjectFolderContributions.new(
-              appraised[:project], appraised[:folder]
+            processing = Views::AppraisalProcessing.new(
+              App.config, appraisal.response
             )
 
-            response.expires 60, public: true
-            view 'project', locals: { proj_folder: proj_folder }
+            # Show viewer the project
+            view 'project', locals: { proj_folder: proj_folder,
+                                      processing: processing }
           end
         end
       end
